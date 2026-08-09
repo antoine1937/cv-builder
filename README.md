@@ -2,9 +2,11 @@
 
 Un générateur de CV en React : formulaire à gauche, aperçu en direct à droite, export en PDF. Troisième projet de mon portfolio, celui qui montre React (les deux précédents sont en HTML/CSS/JS vanilla).
 
+**Démo en ligne : [antoine1937.github.io/cv-builder](https://antoine1937.github.io/cv-builder/)**
+
 ## Fonctionnalités
 
-- Formulaire complet : informations personnelles, compétences (par catégories), expériences professionnelles, formations
+- Formulaire complet : informations personnelles (avec résumé/phrase d'intro facultatif), compétences (par catégories), expériences professionnelles, formations
 - Aperçu du CV qui se met à jour en temps réel pendant la saisie
 - **3 modèles visuels** différents (Classique, Minimaliste, Moderne), interchangeables à tout moment
 - Listes dynamiques : ajouter/modifier/supprimer des expériences, formations et catégories de compétences
@@ -28,6 +30,14 @@ Un générateur de CV en React : formulaire à gauche, aperçu en direct à droi
 ```
 npm install
 npm run dev
+```
+
+## Déploiement
+
+Déployé sur GitHub Pages via le paquet [`gh-pages`](https://www.npmjs.com/package/gh-pages), qui construit le projet (`npm run build`) et pousse le dossier `dist/` généré vers une branche `gh-pages` séparée :
+
+```
+npm run deploy
 ```
 
 ## Ce que ce projet démontre
