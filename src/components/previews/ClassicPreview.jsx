@@ -47,6 +47,7 @@ function ClassicPreview({ data }) {
 
       <div className="classic-main">
         <h1 className="classic-headline">{personal.title || 'Ton titre / accroche'}</h1>
+        {personal.summary && <p className="classic-summary">{personal.summary}</p>}
 
         {experiences.length > 0 && (
           <section className="classic-timeline-section">

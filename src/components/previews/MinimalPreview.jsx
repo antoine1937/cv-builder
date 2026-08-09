@@ -25,6 +25,8 @@ function MinimalPreview({ data }) {
         </div>
       </header>
 
+      {personal.summary && <p className="minimal-summary">{personal.summary}</p>}
+
       {skills.length > 0 && (
         <section className="minimal-section">
           <h2>Compétences</h2>

@@ -91,6 +91,15 @@ function PersonalInfoForm({ personal, onChange }) {
         placeholder="Ex : Recherche d'alternance en developpement web"
       />
 
+      <label htmlFor="summary">Résumé / phrase d'intro (facultatif)</label>
+      <textarea
+        id="summary"
+        rows="2"
+        value={personal.summary}
+        onChange={(e) => updateField('summary', e.target.value)}
+        placeholder="Ex : Passionne par le developpement web, je cherche a mettre en pratique mes competences en entreprise."
+      />
+
       {/* Regroupees deux par deux (comme les dates dans ExperienceForm)
           pour ne pas empiler 4 champs pleine largeur d'affilee. */}
       <div className="field-row">

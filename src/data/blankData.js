@@ -6,6 +6,7 @@ export const blankData = {
   personal: {
     name: '',
     title: '',
+    summary: '',
     email: '',
     phone: '',
     age: '',

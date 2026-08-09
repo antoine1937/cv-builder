@@ -36,6 +36,14 @@
   font-size: 0.95rem;
 }
 
+.modern-summary {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  padding: 16px 28px 0;
+  margin: 0;
+}
+
 .modern-body {
   display: flex;
 }

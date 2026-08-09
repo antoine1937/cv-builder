@@ -19,6 +19,8 @@ function ModernPreview({ data }) {
         </div>
       </header>
 
+      {personal.summary && <p className="modern-summary">{personal.summary}</p>}
+
       <div className="modern-body">
         <aside className="modern-aside">
           <div className="modern-block">

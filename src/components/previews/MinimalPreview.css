@@ -46,6 +46,13 @@
   color: #555;
 }
 
+.minimal-summary {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+  margin: 0 0 22px;
+}
+
 .minimal-section {
   margin-bottom: 22px;
 }

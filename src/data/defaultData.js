@@ -6,6 +6,10 @@ export const defaultData = {
   personal: {
     name: 'Antoine Lupiac',
     title: "Recherche d'alternance en développement web",
+    // Facultatif : une ou deux phrases d'intro/resume, affichees sous le
+    // titre dans l'apercu. Vide par defaut -- rien ne s'affiche tant que
+    // ce n'est pas rempli (voir le rendu conditionnel dans chaque modele).
+    summary: '',
     email: 'antoine.lupiac1997@gmail.com',
     phone: '06 28 64 65 37',
     age: '29 ans',
