@@ -57,12 +57,9 @@
     flex-basis: auto;
     width: 100%;
   }
-}
-
-@media (max-width: 900px) {
+  /* Sur mobile, formulaire et apercu sont empiles (pas cote a cote) --
+     le sticky n'aurait plus de sens dans cette disposition. */
   .cv-preview-root {
-    /* Sur mobile, formulaire et apercu sont empiles (pas cote a cote) --
-       le sticky n'aurait plus de sens dans cette disposition. */
     position: static;
   }
 }
