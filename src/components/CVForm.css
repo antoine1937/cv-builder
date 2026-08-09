@@ -1,0 +1,143 @@
+.cv-form {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-section h2 {
+  font-size: 1.05rem;
+  margin: 0 0 12px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  min-width: 0; /* empeche un champ de forcer son parent a s'elargir au-dela de la colonne disponible */
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+  border-color: var(--accent);
+}
+
+/* Une "carte" par entree repetable (une experience, une formation, une
+   categorie de competences) -- regroupe visuellement ses champs et le
+   bouton pour la supprimer. */
+.repeatable-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.repeatable-item input,
+.repeatable-item textarea {
+  margin-top: 0;
+}
+
+.date-row {
+  display: flex;
+  gap: 8px;
+}
+
+.date-row input {
+  flex: 1;
+  min-width: 0; /* meme correctif que pour SortableItem : sans ca, l'input garde sa largeur "naturelle" et deborde */
+}
+
+/* Regroupe deux champs cote a cote (email+telephone, age+localisation) --
+   meme principe que .date-row juste au-dessus. */
+.field-row {
+  display: flex;
+  gap: 10px;
+}
+
+.field-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* "position: relative" est indispensable ici : c'est ce qui sert de
+   repere pour positionner le menu de suggestions juste en dessous
+   (.autocomplete-list utilise "position: absolute", qui se cale par
+   rapport au plus proche ancetre en "position: relative"). */
+.autocomplete-wrapper {
+  position: relative;
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin: 2px 0 0;
+  padding: 4px;
+  list-style: none;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.autocomplete-list li {
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.autocomplete-list li:hover {
+  background: var(--bg);
+}
+
+.add-btn {
+  align-self: flex-start;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.remove-btn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: #c53030;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}

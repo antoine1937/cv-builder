@@ -1,0 +1,127 @@
+/* Modele Minimaliste : une seule colonne, noir/blanc + un seul accent
+   discret, tout est dans la typographie et l'espacement plutot que la
+   couleur. */
+.minimal-preview {
+  background: white;
+  padding: 36px 40px;
+  min-height: 500px;
+}
+
+.minimal-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid #111;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.minimal-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.minimal-name {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #111;
+  letter-spacing: -0.01em;
+}
+
+.minimal-title {
+  color: #0f766e;
+  font-weight: 600;
+  margin: 4px 0 8px;
+  font-size: 0.95rem;
+}
+
+.minimal-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.minimal-section {
+  margin-bottom: 22px;
+}
+
+.minimal-section h2 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0f766e;
+  margin: 0 0 12px;
+}
+
+.minimal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-left: 10px; /* meme decalage que le formulaire, pour la coherence */
+}
+
+.minimal-tag {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.minimal-item {
+  margin-bottom: 14px;
+  padding-left: 10px; /* meme decalage que le formulaire, pour la coherence */
+}
+
+.minimal-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.minimal-item-title {
+  font-weight: 700;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #111;
+}
+
+.minimal-item-company {
+  font-weight: 400;
+  color: #555;
+}
+
+.minimal-item-dates {
+  font-size: 0.75rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+.minimal-item-location {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 2px 0;
+}
+
+.minimal-item-desc {
+  font-size: 0.85rem;
+  color: #444;
+  margin: 4px 0 0;
+}
+
+@media (max-width: 600px) {
+  .minimal-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .minimal-contact {
+    justify-content: center;
+  }
+}

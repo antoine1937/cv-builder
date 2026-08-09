@@ -1,0 +1,36 @@
+.sortable-item {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+/* Le bug qu'on corrige ici : "flex: 1" ne marche que sur un ENFANT DIRECT
+   d'un conteneur flex. Or .repeatable-item est dans .sortable-content, pas
+   directement dans .sortable-item -- la regle etait donc sans effet, et
+   .sortable-content (sans aucune taille definie) grandissait de facon
+   imprevisible selon son contenu. On corrige au bon niveau : */
+.sortable-content {
+  flex: 1;
+  min-width: 0; /* classique en flexbox : autorise le contenu a se retrecir sous sa taille "naturelle" au lieu de deborder */
+}
+
+.sortable-content .repeatable-item {
+  margin-bottom: 0;
+}
+
+.drag-handle {
+  flex-shrink: 0;
+  width: 24px;
+  border: none;
+  background: var(--border);
+  border-radius: 6px;
+  cursor: grab;
+  color: var(--text-muted);
+  font-size: 1rem;
+  touch-action: none; /* evite que le navigateur "scrolle" au lieu de glisser sur mobile/tablette */
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}

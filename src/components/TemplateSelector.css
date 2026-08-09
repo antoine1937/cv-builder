@@ -1,0 +1,22 @@
+.template-selector {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.template-btn {
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--text-dark);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.template-btn.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}

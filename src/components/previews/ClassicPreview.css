@@ -1,0 +1,152 @@
+/* Modele Classique : deux colonnes cote a cote -- un bandeau fonce a
+   gauche (photo, contact, competences), le contenu principal a droite. */
+.classic-preview {
+  display: flex;
+  background: white;
+  min-height: 500px;
+}
+
+.classic-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: #1e3a5f;
+  color: white;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Repartit les blocs (photo+nom, contact, chaque categorie de
+     competences) sur toute la hauteur disponible au lieu de les tasser
+     en haut -- ca "remplit" visuellement le bandeau quand le contenu
+     principal (a droite) est plus long, sans ajouter de faux contenu. */
+  justify-content: space-evenly;
+}
+
+.classic-header-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.classic-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.classic-name {
+  font-size: 1.2rem;
+  margin: 0 0 16px;
+  color: white;
+}
+
+.classic-contact {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.85);
+  word-break: break-word;
+}
+
+.classic-contact p {
+  margin: 0; /* annule la marge par defaut du navigateur sur <p> (~1em haut/bas) */
+}
+
+.classic-skill-block {
+  width: 100%;
+  text-align: left;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.classic-skill-block h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 8px;
+}
+
+.classic-skill-block ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 10px; /* meme decalage que le formulaire, pour la coherence */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+.classic-main {
+  flex: 1;
+  padding: 28px 32px;
+  text-align: left;
+}
+
+.classic-headline {
+  font-size: 1.3rem;
+  color: #1e3a5f;
+  margin: 0 0 20px;
+}
+
+.classic-timeline-section {
+  margin-bottom: 24px;
+}
+
+.classic-timeline-section h3 {
+  font-size: 1rem;
+  color: #1e3a5f;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+  margin: 0 0 14px;
+}
+
+.classic-timeline-item {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding-left: 10px; /* meme decalage que le formulaire, pour la coherence */
+}
+
+.classic-timeline-dates {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.classic-timeline-title {
+  font-weight: 700;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.classic-timeline-subtitle {
+  color: #c17817;
+  font-size: 0.85rem;
+  margin: 2px 0 4px;
+}
+
+.classic-timeline-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .classic-preview {
+    flex-direction: column;
+  }
+  .classic-sidebar {
+    width: 100%;
+  }
+  .classic-timeline-item {
+    grid-template-columns: 1fr;
+  }
+}
